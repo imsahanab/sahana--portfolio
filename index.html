@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sahana B — Portfolio</title>
+  <style>
+    *{
+        margin:0;padding:0;box-sizing:border-box;font-family:Inter,sans-serif
+    }
+    body{
+        background:rgb(10, 0, 0);
+        color:white;
+        overflow-x:hidden;
+        padding-top:80px
+    }
+    .abt
+    {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: large;
+        width: 60%;
+    }
+    .t
+    {
+        height: 40px;
+        width: 500px;
+        border-radius: 10px;
+        background-color: rgb(241, 238, 238);
+    }
+
+    /* NAV */
+    nav{
+        position:fixed;
+        top:0;left:0;
+        width:100%;
+        padding:18px 40px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;background:rgba(10,15,31,0.45);
+        backdrop-filter:blur(8px);
+        z-index:20;
+        border-bottom:1px solid rgba(255,255,255,0.1)}
+    nav a{
+        color:#e6f4ff;
+        text-decoration:none;
+        margin-left:28px;
+        font-weight:600
+    }
+    .p
+    {
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: larger;
+    }
+
+    /* HERO */
+    .hero{
+        padding:140px 40px 120px;background:linear-gradient(135deg,#c36cc9,#920deb);
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:40px
+    }
+    .hero-text h1{
+        font-size:52px;
+        font-weight:800
+    }
+    .hero-text h1 span
+    {
+        background:linear-gradient(90deg,#6ee7ff,#c084fc);
+        -webkit-background-clip:text;
+         -webkit-text-fill-color: transparent;
+         background-clip: text; 
+        color: black; 
+        
+    }
+    .hero-btn{margin-top:20px;background:white;color:#061028;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;display:inline-block}
+    .hero-img{width:600px;height:300px;border-radius:20px;overflow:hidden;border:4px solid rgba(255,255,255,0.5)
+    }
+    .hero-img img{
+        width:100%;
+        height:100%;
+        object-fit:cover}
+ 
+
+
+
+    /* TITLES */
+    h2{margin-top:70px;text-align:center;
+        font-size:32px;
+        background:linear-gradient(90deg,#6ee7ff,#c084fc);
+        -webkit-background-clip:text;
+        background-clip: text; 
+     color: black; color:transparent}
+
+    /* SECTION CARDS */
+    .section-box{
+        max-width:900px;
+        margin:20px auto;
+        padding:26px;
+        border-radius:16px;
+        border:1px solid rgba(255,255,255,0.15);
+        box-shadow:0 10px 40px rgba(0,0,0,0.3);
+        color:#061028;
+    }
+
+.about-box
+{
+    background:linear-gradient(135deg,#6ee7ff,#c5175a)
+}
+  
+#education {
+  padding: 50px 20px;
+  background: #c7a9a9;
+  text-align: center;
+  position: relative;
+}
+
+#education h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Horizontal scroll container centered */
+.edu-container {
+  display: flex;
+  justify-content: center; /* centers the boxes horizontally */
+  gap: 30px; /* equal space between cards */
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scrollbar-width: thin;
+
+  /* Animation */
+  transform: translateX(100%);
+  animation: slideIn 2.5s forwards; /* slide effect */
+}
+
+/* Individual boxes */
+.edu-box {
+  min-width: 250px;
+  background: rgb(216, 162, 162);
+  color: #333;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  flex-shrink: 0; /* prevent shrinking */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.edu-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+
+    .skills-box{background:linear-gradient(135deg,#ffb86b,#ff7ce5)}
+    .projects-box{background:linear-gradient(135deg,#7afcff,#5e0242)}
+    .pub-box{background:linear-gradient(135deg,#ffd76b,#ff7ce5)}
+    .resume-box{background:linear-gradient(135deg,#8df7b5,#57a3ff)}
+
+    /* SKILLS GRID */
+    .skills-grid{display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+        gap:18px;margin-top:18px}
+    .skill{background:white;
+        color:#061028;
+        padding:16px;
+        text-align:center;
+        border-radius:10px;
+        font-weight:700;
+        opacity:0
+    }
+
+    /* SLIDE ANIMATIONS */
+    .slide-left{
+        opacity:0;
+        transform:translateX(-80px);
+        transition:.8s ease}
+    .slide-right{
+        opacity:0;
+        transform:translateX(80px);
+        transition:.8s ease
+    }
+    .show{
+        opacity:1;
+        transform:translateX(0)
+    }
+
+    
+
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div style="font-weight:800;font-size:20px">SAHANA B</div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Publications</a>
+      <a href="#resume">Resume</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero slide-left">
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Sahana B</span></h1>
+      <p class="abt">
+ A passionate B.Tech IT graduate who loves creating clean, modern and animated web pages.
+  I enjoy learning new technologies, building user-friendly interfaces, and working on meaningful projects.
+   I focus on writing clean code, improving my skills every day, and growing into a strong developer.
+</p>
+<br>
+    <p class="p"><SPAN>B.Tech-IT</SPAN></p>
+      <button class="t">FRESHER  || JAVA FULLSTACK DEVELOPER    || WEB DESIGNER</button>
+      <a class="hero-btn" href="#projects">View My Work</a>
+    </div>
+    <div class="hero-img"><img src="image.png"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <h2 id="about">About Me</h2>
+  <div class="section-box about-box slide-left">
+    <p><strong>Email:</strong> sahanabaranidaran@gmail.com</p>
+    <p><strong>Phone:</strong> +91 6374443814</p>
+    <p><strong>LinkedIn:</strong> linkedin.com/in/sahana-baranidaran-662a8b249</p>
+    <p><strong>DOB:</strong> 02/08/2004</p>
+  </div>
+<!--education-->
+  <section id="education">
+  <h2>Education</h2>
+  <div class="edu-container">
+    <div class="edu-box">
+      <h3>SSLC</h3>
+      <p>School: Sri Sankara Vidyalaya matric.hr.sec.school, urapakkam</p>
+      <p>Percentage: 76.20%</p>
+    </div>
+    <div class="edu-box">
+      <h3>Higher Secondary</h3>
+      <p>School:Sri Sankara Vidyalaya matric.hr.sec.school, urapakkam </p>
+      <p>Percentage: 82%</p>
+    </div>
+    <div class="edu-box">
+      <h3>College</h3>
+      <p>Degree:B.Tech IT</p>
+      <p>Percentage: 8.69CGPA / 10</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- SKILLS -->
+  <h2 id="skills">Skills</h2>
+  <div class="section-box skills-box slide-left">
+    <div class="skills-grid">
+      <div class="skill slide-left">Java</div>
+      <div class="skill slide-left">SQL</div>
+      <div class="skill slide-right">HTML & CSS</div>
+      <div class="skill slide-right">JavaScript</div>
+      <div class="skill slide-right">React.js</div>
+    </div>
+  </div>
+
+  <!-- PROJECTS -->
+  <h2 id="projects">Projects</h2>
+  <div class="section-box projects-box slide-left">
+    <div class="project"><h3>1.  Personal Portfolio Website</h3><p>A modern animated Personal portfolio.</p></div><br>
+    <div class="project"><h3>2.  Intelligent Pregnancy Care Monitoring System (IoT)</h3><p>Monitors vitals using sensors.</p></div>
+  
+  </div>
+  
+
+   <!-- PUBLICATIONS -->
+  <h2 id="publications">Publications</h2>
+  <div class="section-box pub-box slide-right">
+    <div class="project"><h3>ICON'25 — Dr. M.G.R. Research Institute</h3></div>
+    <p>Presented my patient care using mobile monitoring wih alerting sound project at Dr.mgr university's conference as an internal conference publication</p>
+    <div class="project"><h3>ICONIC'25 — Panimalar Institute (Scopus indexed)</h3></div>
+    <p>Presented my patient care using mobile monitoring with alerting sound project at Panimalar intitute's conference as an external conference publication with scopus index</p>
+  </div>
+ 
+
+  <!-- RESUME -->
+  <h2 id="resume">Resume</h2>
+  <div class="section-box resume-box slide-left" style="text-align:center">
+    <a class="hero-btn" href="sahanares.pdf" download>Download My Resume (PDF)</a>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.slide-left, .slide-right, .skill');
+    const io = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});
+    },{threshold:0.2});
+    sections.forEach(sec=>io.observe(sec));
+  </script>
+
+</body>
+</html>
