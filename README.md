@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website!  
 
 ** About Me**
-I am Sahana, a web developer and student passionate about creating interactive web experiences.
+I am Sahana, a web developer and recent graduate in BTech IT passionate about creating interactive web experiences and eager to learn new technologies.
 
 ** Technologies Used**
 - HTML
