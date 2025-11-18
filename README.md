@@ -11,7 +11,7 @@ I am Sahana, a web developer and recent graduate in BTech IT passionate about cr
 - JavaScript
 
 ** How to View**
-You can view the live portfolio here: [Portfolio Link](sahana--portfolio/)
+You can view the live portfolio here: [Portfolio Link](sahanab-portfolio.netlify.app)
 
 ## Resume
 Download my resume here: [Resume PDF](sahanares.pdf)
