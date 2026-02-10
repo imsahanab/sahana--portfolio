@@ -12,22 +12,9 @@
       font-family: 'Inter', 'Segoe UI', sans-serif;
     }
 
-    :root {
-      --primary: #ffffff;
-      --secondary: #f8f9fa;
-      --accent1: #667eea;
-      --accent2: #764ba2;
-      --accent3: #ff7ce5;
-      --text: #333333;
-      --text-light: #666666;
-      --card-bg: #ffffff;
-      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      --border: 1px solid #eaeaea;
-    }
-
     body {
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-      color: var(--text);
+      background: #f8f9fa;
+      color: #333333;
       overflow-x: hidden;
       line-height: 1.6;
     }
@@ -38,79 +25,77 @@
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--secondary);
+      background: #f0f0f0;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: linear-gradient(45deg, var(--accent1), var(--accent2));
+      background: linear-gradient(45deg, #667eea, #764ba2);
       border-radius: 4px;
     }
 
-    /* NAV */
-    nav {
+    /* Header */
+    .main-header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      padding: 1.2rem 3rem;
+      padding: 18px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.98);
       z-index: 1000;
-      border-bottom: var(--border);
+      border-bottom: 1px solid #eaeaea;
       box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
     }
 
     .logo {
       font-weight: 800;
-      font-size: 1.6rem;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      font-size: 24px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
-      letter-spacing: -0.5px;
     }
 
-    .nav-links {
+    .nav-menu {
       display: flex;
-      gap: 2rem;
+      gap: 28px;
     }
 
-    nav a {
-      color: var(--text);
+    .nav-link {
+      color: #333333;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 15px;
       position: relative;
-      padding: 0.5rem 0;
+      padding: 6px 0;
       transition: color 0.3s ease;
     }
 
-    nav a:hover {
-      color: var(--accent1);
+    .nav-link:hover {
+      color: #667eea;
     }
 
-    nav a::after {
+    .nav-link::after {
       content: '';
       position: absolute;
       bottom: 0;
       left: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      background: linear-gradient(90deg, #667eea, #764ba2);
       transition: width 0.3s ease;
     }
 
-    nav a:hover::after {
+    .nav-link:hover::after {
       width: 100%;
     }
 
-    /* HERO SECTION */
-    .hero {
+    /* Main Banner */
+    .banner {
       min-height: 100vh;
-      padding: 8rem 3rem 4rem;
+      padding: 120px 40px 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -119,7 +104,7 @@
       overflow: hidden;
     }
 
-    .hero::before {
+    .banner::before {
       content: '';
       position: absolute;
       top: 0;
@@ -131,124 +116,124 @@
       z-index: 0;
     }
 
-    .hero-content {
+    .banner-content {
       max-width: 600px;
       position: relative;
       z-index: 1;
     }
 
-    .hero h1 {
-      font-size: 3.2rem;
+    .banner-title {
+      font-size: 48px;
       font-weight: 800;
       line-height: 1.1;
-      margin-bottom: 1.5rem;
-      color: var(--text);
+      margin-bottom: 24px;
+      color: #333333;
     }
 
-    .hero h1 span {
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+    .banner-title span {
+      background: linear-gradient(90deg, #667eea, #764ba2);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       position: relative;
     }
 
-    .hero h1 span::after {
+    .banner-title span::after {
       content: '';
       position: absolute;
       bottom: -5px;
       left: 0;
       width: 100%;
       height: 3px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      background: linear-gradient(90deg, #667eea, #764ba2);
       border-radius: 2px;
     }
 
-    .hero p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: var(--text-light);
+    .banner-text {
+      font-size: 18px;
+      margin-bottom: 32px;
+      color: #666666;
       max-width: 90%;
     }
 
-    .tagline-container {
+    .tag-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      margin: 1.5rem 0;
+      gap: 12px;
+      margin: 24px 0;
     }
 
-    .tagline {
+    .tag {
       display: inline-block;
       background: white;
-      padding: 0.6rem 1.2rem;
+      padding: 10px 20px;
       border-radius: 50px;
       font-weight: 600;
-      border: var(--border);
-      box-shadow: var(--shadow);
-      color: var(--text);
+      border: 1px solid #eaeaea;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      color: #333333;
       transition: all 0.3s ease;
     }
 
-    .tagline:hover {
+    .tag:hover {
       transform: translateY(-3px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(90deg, #667eea, #764ba2);
       color: white;
     }
 
-    .hero-buttons {
+    .button-group {
       display: flex;
-      gap: 1rem;
-      margin-top: 2rem;
+      gap: 16px;
+      margin-top: 32px;
     }
 
-    .btn-primary, .btn-secondary {
-      padding: 1rem 2rem;
+    .primary-btn, .secondary-btn {
+      padding: 16px 32px;
       border-radius: 12px;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 8px;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    .primary-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
       border: none;
       box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
     }
 
-    .btn-primary:hover {
+    .primary-btn:hover {
       transform: translateY(-3px);
       box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
     }
 
-    .btn-secondary {
+    .secondary-btn {
       background: white;
-      color: var(--text);
-      border: var(--border);
-      box-shadow: var(--shadow);
+      color: #333333;
+      border: 1px solid #eaeaea;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     }
 
-    .btn-secondary:hover {
-      border-color: var(--accent1);
+    .secondary-btn:hover {
+      border-color: #667eea;
       transform: translateY(-3px);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     }
 
-    .hero-image {
+    .profile-image {
       width: 450px;
       height: 450px;
       position: relative;
       z-index: 1;
     }
 
-    .hero-image::before {
+    .profile-image::before {
       content: '';
       position: absolute;
       top: 50%;
@@ -256,76 +241,76 @@
       transform: translate(-50%, -50%);
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      background: linear-gradient(135deg, #667eea, #764ba2);
       border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
       filter: blur(20px);
       opacity: 0.1;
       z-index: -1;
     }
 
-    .hero-image img {
+    .profile-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 20px;
-      border: var(--border);
-      box-shadow: var(--shadow);
+      border: 1px solid #eaeaea;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
-    /* SECTION STYLES */
-    section {
-      padding: 5rem 3rem;
+    /* Section Styles */
+    .content-section {
+      padding: 80px 40px;
       position: relative;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 3rem;
-      color: var(--text);
+      font-size: 36px;
+      margin-bottom: 48px;
+      color: #333333;
       position: relative;
     }
 
-    .section-title::after {
+    .section-heading::after {
       content: '';
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
       width: 60px;
       height: 4px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      background: linear-gradient(90deg, #667eea, #764ba2);
       border-radius: 2px;
     }
 
-    /* ABOUT SECTION */
-    .about-container {
+    /* About Section */
+    .about-wrapper {
       max-width: 1000px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 3rem;
+      gap: 40px;
       align-items: start;
     }
 
-    .about-info {
-      background: var(--card-bg);
+    .info-card {
+      background: white;
       border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: var(--shadow);
-      border: var(--border);
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
     }
 
     .info-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 20px;
+      margin-top: 16px;
     }
 
     .info-item {
-      padding: 1rem;
-      background: var(--secondary);
+      padding: 16px;
+      background: #f8f9fa;
       border-radius: 12px;
       transition: all 0.3s ease;
     }
@@ -333,53 +318,53 @@
     .info-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
     }
 
-    .info-item:hover h4 {
+    .info-item:hover .info-label {
       color: white;
     }
 
-    .info-item h4 {
-      color: var(--accent1);
-      margin-bottom: 0.5rem;
-      font-size: 0.9rem;
+    .info-label {
+      color: #667eea;
+      margin-bottom: 6px;
+      font-size: 14px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
-    .info-item p {
-      color: var(--text);
+    .info-value {
+      color: #333333;
       font-weight: 600;
     }
 
-    /* NEW EDUCATION SECTION - Cards Layout */
-    #education {
+    /* Education Section */
+    .education-section {
       background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
       border-radius: 30px;
-      margin: 2rem;
-      box-shadow: var(--shadow);
+      margin: 32px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
-    .education-container {
+    .education-wrapper {
       max-width: 1200px;
       margin: 0 auto;
     }
 
-    .education-grid {
+    .education-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      gap: 32px;
+      margin-top: 32px;
     }
 
     .education-card {
       background: white;
       border-radius: 20px;
-      padding: 2.5rem;
-      box-shadow: var(--shadow);
-      border: var(--border);
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
       position: relative;
       overflow: hidden;
       transition: all 0.4s ease;
@@ -387,7 +372,7 @@
 
     .education-card:hover {
       transform: translateY(-10px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
     }
 
     .education-card::before {
@@ -397,66 +382,66 @@
       left: 0;
       width: 100%;
       height: 5px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      background: linear-gradient(90deg, #667eea, #764ba2);
     }
 
-    .education-icon {
+    .card-icon {
       width: 60px;
       height: 60px;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      background: linear-gradient(135deg, #667eea, #764ba2);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 24px;
       color: white;
-      font-size: 1.5rem;
+      font-size: 24px;
       box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
     }
 
     .education-card h3 {
-      color: var(--text);
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
+      color: #333333;
+      margin-bottom: 16px;
+      font-size: 24px;
     }
 
-    .education-details {
-      margin: 1.5rem 0;
+    .details-list {
+      margin: 24px 0;
     }
 
-    .detail-item {
+    .detail-row {
       display: flex;
       align-items: center;
-      margin-bottom: 0.8rem;
-      color: var(--text-light);
+      margin-bottom: 12px;
+      color: #666666;
     }
 
-    .detail-item i {
-      color: var(--accent1);
-      margin-right: 0.8rem;
+    .detail-row i {
+      color: #667eea;
+      margin-right: 12px;
       width: 20px;
     }
 
-    .duration {
+    .year-badge {
       display: inline-block;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
-      padding: 0.4rem 1rem;
+      padding: 8px 20px;
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 14px;
       font-weight: 600;
-      margin-top: 1rem;
+      margin-top: 16px;
     }
 
-    /* SKILLS SECTION */
-    #skills {
+    /* Skills Section */
+    .skills-section {
       background: white;
       border-radius: 30px;
-      margin: 2rem;
-      box-shadow: var(--shadow);
+      margin: 32px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
-    .skills-container {
+    .skills-wrapper {
       max-width: 1000px;
       margin: 0 auto;
     }
@@ -464,46 +449,30 @@
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1.5rem;
+      gap: 20px;
     }
 
-    .skill-card {
-      background: var(--secondary);
+    .skill-item {
+      background: #f8f9fa;
       border-radius: 15px;
-      padding: 1.5rem;
+      padding: 24px;
       text-align: center;
-      border: var(--border);
+      border: 1px solid #eaeaea;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
     }
 
-    .skill-card:hover {
+    .skill-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
       background: white;
     }
 
-    .skill-card:hover::before {
-      transform: scale(2);
-    }
-
-    .skill-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, transparent, rgba(102, 126, 234, 0.05), transparent);
-      transition: transform 0.5s ease;
-      z-index: 0;
-    }
-
     .skill-icon {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      font-size: 40px;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -511,18 +480,18 @@
       z-index: 1;
     }
 
-    .skill-card h4 {
-      color: var(--text);
-      margin-bottom: 0.5rem;
+    .skill-item h4 {
+      color: #333333;
+      margin-bottom: 8px;
       position: relative;
       z-index: 1;
     }
 
-    /* PROJECTS SECTION */
+    /* Projects Section */
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 2rem;
+      gap: 32px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -530,9 +499,9 @@
     .project-card {
       background: white;
       border-radius: 20px;
-      padding: 2rem;
-      box-shadow: var(--shadow);
-      border: var(--border);
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
       transition: all 0.3s ease;
       position: relative;
       overflow: hidden;
@@ -550,14 +519,14 @@
       left: 0;
       width: 100%;
       height: 5px;
-      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      background: linear-gradient(90deg, #667eea, #764ba2);
     }
 
     .project-number {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      top: 16px;
+      right: 16px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
       width: 40px;
       height: 40px;
@@ -566,152 +535,149 @@
       align-items: center;
       justify-content: center;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 20px;
     }
 
     .project-card h3 {
-      color: var(--text);
-      margin-bottom: 1rem;
-      font-size: 1.4rem;
-      padding-right: 3rem;
+      color: #333333;
+      margin-bottom: 16px;
+      font-size: 22px;
+      padding-right: 48px;
     }
 
     .project-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      color: var(--accent1);
+      gap: 8px;
+      margin-top: 16px;
+      color: #667eea;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
     }
 
     .project-link:hover {
-      color: var(--accent2);
-      gap: 1rem;
+      color: #764ba2;
+      gap: 12px;
     }
 
-    /* PUBLICATIONS SECTION */
-    .publications-container {
+    /* Publications Section */
+    .publications-wrapper {
       max-width: 800px;
       margin: 0 auto;
     }
 
-    .publication-card {
+    .publication-item {
       background: white;
       border-radius: 15px;
-      padding: 2rem;
-      margin-bottom: 1.5rem;
-      box-shadow: var(--shadow);
-      border: var(--border);
+      padding: 32px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid #eaeaea;
       transition: all 0.3s ease;
     }
 
-    .publication-card:hover {
+    .publication-item:hover {
       transform: translateX(10px);
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
     }
 
-    .publication-card h3 {
-      color: var(--text);
-      margin-bottom: 0.8rem;
-      font-size: 1.3rem;
+    .publication-item h3 {
+      color: #333333;
+      margin-bottom: 12px;
+      font-size: 20px;
     }
 
     .publication-tag {
       display: inline-block;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
-      padding: 0.3rem 1rem;
+      padding: 6px 20px;
       border-radius: 20px;
-      font-size: 0.8rem;
+      font-size: 14px;
       font-weight: 600;
-      margin-top: 1rem;
+      margin-top: 16px;
     }
 
-    /* RESUME SECTION */
+    /* Resume Section */
     .resume-section {
       text-align: center;
-      padding: 4rem 2rem;
-      background: linear-gradient(135deg, white, var(--secondary));
+      padding: 64px 32px;
+      background: linear-gradient(135deg, white, #f8f9fa);
       border-radius: 30px;
-      margin: 2rem;
-      box-shadow: var(--shadow);
+      margin: 32px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     }
 
-    .resume-btn {
+    .download-btn {
       display: inline-flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1.2rem 2.5rem;
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+      gap: 16px;
+      padding: 20px 40px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
       text-decoration: none;
       border-radius: 12px;
       font-weight: 700;
-      font-size: 1.1rem;
+      font-size: 18px;
       transition: all 0.3s ease;
       box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
     }
 
-    .resume-btn:hover {
+    .download-btn:hover {
       transform: translateY(-5px) scale(1.05);
       box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
     }
 
-    /* FOOTER */
-    footer {
+    /* Footer */
+    .page-footer {
       text-align: center;
-      padding: 3rem;
+      padding: 48px;
       background: white;
-      border-top: var(--border);
-      margin-top: 4rem;
+      border-top: 1px solid #eaeaea;
+      margin-top: 64px;
       box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
     }
 
-    .social-links {
+    .contact-links {
       display: flex;
       justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
+      gap: 16px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
 
-    .social-link {
-      color: var(--text);
+    .contact-link {
+      color: #333333;
       text-decoration: none;
-      padding: 0.8rem 1.5rem;
-      border: var(--border);
+      padding: 12px 24px;
+      border: 1px solid #eaeaea;
       border-radius: 10px;
       transition: all 0.3s ease;
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 8px;
     }
 
-    .social-link:hover {
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
+    .contact-link:hover {
+      background: linear-gradient(135deg, #667eea, #764ba2);
       color: white;
       border-color: transparent;
       transform: translateY(-3px);
     }
 
-    /* ANIMATIONS */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
+    /* Animation Classes */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 0.8s ease forwards;
+    }
+
+    @keyframes slideUp {
       to {
         opacity: 1;
         transform: translateY(0);
       }
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fadeInUp 0.8s ease forwards;
     }
 
     .delay-1 { animation-delay: 0.1s; }
@@ -720,63 +686,63 @@
     .delay-4 { animation-delay: 0.4s; }
     .delay-5 { animation-delay: 0.5s; }
 
-    /* RESPONSIVE DESIGN */
+    /* Responsive Design */
     @media (max-width: 1024px) {
-      .hero {
+      .banner {
         flex-direction: column;
         text-align: center;
-        padding: 7rem 2rem 3rem;
+        padding: 100px 20px 40px;
       }
 
-      .hero-image {
+      .profile-image {
         width: 350px;
         height: 350px;
-        margin-top: 3rem;
+        margin-top: 40px;
         order: -1;
       }
 
-      .hero-content {
+      .banner-content {
         max-width: 100%;
       }
 
-      .about-container {
+      .about-wrapper {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 32px;
       }
 
-      .education-grid {
+      .education-cards {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 768px) {
-      nav {
-        padding: 1rem 1.5rem;
+      .main-header {
+        padding: 16px 20px;
       }
 
-      .nav-links {
-        gap: 1rem;
+      .nav-menu {
+        gap: 16px;
       }
 
-      .hero h1 {
-        font-size: 2.2rem;
+      .banner-title {
+        font-size: 36px;
       }
 
-      .hero-image {
+      .profile-image {
         width: 280px;
         height: 280px;
       }
 
-      section {
-        padding: 3rem 1.5rem;
+      .content-section {
+        padding: 60px 20px;
       }
 
-      #education, #skills, .resume-section {
-        margin: 1rem;
+      .education-section, .skills-section, .resume-section {
+        margin: 20px;
       }
 
-      .section-title {
-        font-size: 2rem;
+      .section-heading {
+        font-size: 32px;
       }
 
       .projects-grid {
@@ -789,35 +755,35 @@
     }
 
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 1.8rem;
+      .banner-title {
+        font-size: 28px;
       }
 
-      .hero-buttons {
+      .button-group {
         flex-direction: column;
         align-items: center;
       }
 
-      .btn-primary, .btn-secondary {
+      .primary-btn, .secondary-btn {
         width: 100%;
         justify-content: center;
       }
 
-      .hero-image {
+      .profile-image {
         width: 250px;
         height: 250px;
       }
 
-      .tagline-container {
+      .tag-container {
         justify-content: center;
       }
 
-      .social-links {
+      .contact-links {
         flex-direction: column;
         align-items: center;
       }
 
-      .social-link {
+      .contact-link {
         width: 100%;
         justify-content: center;
       }
@@ -826,82 +792,82 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <!-- NAVBAR -->
-  <nav>
+  <!-- Header -->
+  <header class="main-header">
     <div class="logo">SAHANA B</div>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#publications">Publications</a>
-      <a href="#resume">Resume</a>
-    </div>
-  </nav>
+    <nav class="nav-menu">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#education" class="nav-link">Education</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#publications" class="nav-link">Publications</a>
+      <a href="#resume" class="nav-link">Resume</a>
+    </nav>
+  </header>
 
-  <!-- HERO SECTION -->
-  <section class="hero">
-    <div class="hero-content fade-in">
-      <h1>Hello, I'm <span>Sahana B</span></h1>
-      <p class="fade-in delay-1">
+  <!-- Banner Section -->
+  <section class="banner">
+    <div class="banner-content fade-up">
+      <h1 class="banner-title">Hello, I'm <span>Sahana B</span></h1>
+      <p class="banner-text fade-up delay-1">
         A passionate B.Tech IT graduate who loves creating clean, modern and animated web pages.
         I enjoy learning new technologies, building user-friendly interfaces, and working on meaningful projects.
         I focus on writing clean code, improving my skills every day, and growing into a strong developer.
       </p>
-      <div class="tagline-container">
-        <div class="tagline fade-in delay-2">B.Tech-IT</div>
-        <div class="tagline fade-in delay-2">FRESHER</div>
-        <div class="tagline fade-in delay-3">JAVA FULLSTACK DEVELOPER</div>
-        <div class="tagline fade-in delay-3">WEB DESIGNER</div>
+      <div class="tag-container">
+        <div class="tag fade-up delay-2">B.Tech-IT</div>
+        <div class="tag fade-up delay-2">FRESHER</div>
+        <div class="tag fade-up delay-3">JAVA FULLSTACK DEVELOPER</div>
+        <div class="tag fade-up delay-3">SOFTWARE DEVELOPER</div>
       </div>
-      <div class="hero-buttons">
-        <a href="#projects" class="btn-primary fade-in delay-4">
+      <div class="button-group">
+        <a href="#projects" class="primary-btn fade-up delay-4">
           <i class="fas fa-code"></i>
           <span>View My Work</span>
         </a>
-        <a href="#contact" class="btn-secondary fade-in delay-5">
+        <a href="#contact" class="secondary-btn fade-up delay-5">
           <i class="fas fa-envelope"></i>
           <span>Contact Me</span>
         </a>
       </div>
     </div>
-    <div class="hero-image fade-in delay-5">
+    <div class="profile-image fade-up delay-5">
       <img src="image.jpeg" alt="Sahana B">
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <div class="about-container">
-      <div class="about-info fade-in">
-        <h3 style="color: var(--accent1); margin-bottom: 1.5rem; font-size: 1.8rem;">Personal Information</h3>
+  <!-- About Section -->
+  <section id="about" class="content-section">
+    <h2 class="section-heading">About Me</h2>
+    <div class="about-wrapper">
+      <div class="info-card fade-up">
+        <h3 style="color: #667eea; margin-bottom: 24px; font-size: 24px;">Personal Information</h3>
         <div class="info-grid">
           <div class="info-item">
-            <h4>Email</h4>
-            <p>sahanabaranidaran@gmail.com</p>
+            <div class="info-label">Email</div>
+            <div class="info-value">sahanabaranidaran@gmail.com</div>
           </div>
           <div class="info-item">
-            <h4>Phone</h4>
-            <p>+91 6374443814</p>
+            <div class="info-label">Phone</div>
+            <div class="info-value">+91 6374443814</div>
           </div>
           <div class="info-item">
-            <h4>LinkedIn</h4>
-            <p>sahana-baranidaran-662a8b249</p>
+            <div class="info-label">LinkedIn</div>
+            <div class="info-value">sahana-baranidaran-662a8b249</div>
           </div>
           <div class="info-item">
-            <h4>Date of Birth</h4>
-            <p>02/08/2004</p>
+            <div class="info-label">Date of Birth</div>
+            <div class="info-value">02/08/2004</div>
           </div>
         </div>
       </div>
-      <div class="about-info fade-in delay-1">
-        <h3 style="color: var(--accent1); margin-bottom: 1.5rem; font-size: 1.8rem;">Professional Profile</h3>
-        <p style="color: var(--text-light); margin-bottom: 1rem;">
+      <div class="info-card fade-up delay-1">
+        <h3 style="color: #667eea; margin-bottom: 24px; font-size: 24px;">Professional Profile</h3>
+        <p style="color: #666666; margin-bottom: 16px;">
           Recent B.Tech IT graduate with expertise in Java Full Stack Development and modern web technologies. 
           Passionate about creating responsive, user-friendly applications and continuously learning new frameworks.
         </p>
-        <p style="color: var(--text-light);">
+        <p style="color: #666666;">
           Seeking challenging opportunities in software development where I can leverage my technical skills, 
           contribute to innovative projects, and grow as a professional in a dynamic team environment.
         </p>
@@ -909,114 +875,114 @@
     </div>
   </section>
 
-  <!-- EDUCATION SECTION - New Card Layout -->
-  <section id="education">
-    <div class="education-container">
-      <h2 class="section-title">Education Journey</h2>
-      <div class="education-grid">
-        <div class="education-card fade-in">
-          <div class="education-icon">
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="education-wrapper">
+      <h2 class="section-heading">Education</h2>
+      <div class="education-cards">
+        <div class="education-card fade-up">
+          <div class="card-icon">
             <i class="fas fa-graduation-cap"></i>
           </div>
           <h3>Under Graduate</h3>
-          <div class="education-details">
-            <div class="detail-item">
+          <div class="details-list">
+            <div class="detail-row">
               <i class="fas fa-university"></i>
               <span>Dr.MGR Educational and Research Institute, Maduravayol</span>
             </div>
-            <div class="detail-item">
+            <div class="detail-row">
               <i class="fas fa-graduation-cap"></i>
               <span>B.Tech Information Technology</span>
             </div>
-            <div class="detail-item">
+            <div class="detail-row">
               <i class="fas fa-chart-line"></i>
               <span>CGPA: 8.69 / 10</span>
             </div>
           </div>
-          <div class="duration">2021 - 2025</div>
+          <div class="year-badge">2021 - 2025</div>
         </div>
 
-        <div class="education-card fade-in delay-1">
-          <div class="education-icon">
+        <div class="education-card fade-up delay-1">
+          <div class="card-icon">
             <i class="fas fa-school"></i>
           </div>
           <h3>Higher Secondary</h3>
-          <div class="education-details">
-            <div class="detail-item">
+          <div class="details-list">
+            <div class="detail-row">
               <i class="fas fa-school"></i>
               <span>Sri Sankara Vidyalaya Matriculation School</span>
             </div>
-            <div class="detail-item">
+            <div class="detail-row">
               <i class="fas fa-map-marker-alt"></i>
               <span>Urapakkam, Tamil Nadu</span>
             </div>
-            <div class="detail-item">
+            <div class="detail-row">
               <i class="fas fa-chart-line"></i>
               <span>Percentage: 82%</span>
             </div>
           </div>
-          <div class="duration">2020 - 2021</div>
+          <div class="year-badge">2020 - 2021</div>
         </div>
 
-        <div class="education-card fade-in delay-2">
-          <div class="education-icon">
+        <div class="education-card fade-up delay-2">
+          <div class="card-icon">
             <i class="fas fa-book-open"></i>
           </div>
           <h3>SSLC</h3>
-          <div class="education-details">
-            <div class="detail-item">
+          <div class="details-list">
+            <div class="detail-row">
               <i class="fas fa-school"></i>
               <span>Sri Sankara Vidyalaya Matriculation School</span>
             </div>
-            <div class="detail-item">
+            <div class="detail-row">
               <i class="fas fa-map-marker-alt"></i>
               <span>Urapakkam, Tamil Nadu</span>
             </div>
-            <div class="detail-item">
+            <div class="detail-row">
               <i class="fas fa-chart-line"></i>
               <span>Percentage: 76.20%</span>
             </div>
           </div>
-          <div class="duration">2018 - 2019</div>
+          <div class="year-badge">2018 - 2019</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS SECTION -->
-  <section id="skills">
-    <div class="skills-container">
-      <h2 class="section-title">Technical Skills</h2>
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="skills-wrapper">
+      <h2 class="section-heading">Technical Skills</h2>
       <div class="skills-grid">
-        <div class="skill-card fade-in">
+        <div class="skill-item fade-up">
           <div class="skill-icon">
             <i class="fab fa-java"></i>
           </div>
           <h4>Java</h4>
           <p>Full Stack Development</p>
         </div>
-        <div class="skill-card fade-in delay-1">
+        <div class="skill-item fade-up delay-1">
           <div class="skill-icon">
             <i class="fas fa-database"></i>
           </div>
           <h4>SQL</h4>
           <p>Database Management</p>
         </div>
-        <div class="skill-card fade-in delay-2">
+        <div class="skill-item fade-up delay-2">
           <div class="skill-icon">
             <i class="fab fa-html5"></i>
           </div>
           <h4>HTML & CSS</h4>
           <p>Web Development</p>
         </div>
-        <div class="skill-card fade-in delay-3">
+        <div class="skill-item fade-up delay-3">
           <div class="skill-icon">
             <i class="fab fa-js"></i>
           </div>
           <h4>JavaScript</h4>
           <p>Frontend Development</p>
         </div>
-        <div class="skill-card fade-in delay-4">
+        <div class="skill-item fade-up delay-4">
           <div class="skill-icon">
             <i class="fab fa-react"></i>
           </div>
@@ -1027,21 +993,21 @@
     </div>
   </section>
 
-  <!-- PROJECTS SECTION -->
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
+  <!-- Projects Section -->
+  <section id="projects" class="content-section">
+    <h2 class="section-heading">Projects</h2>
     <div class="projects-grid">
-      <div class="project-card fade-in">
+      <div class="project-card fade-up">
         <div class="project-number">1</div>
         <h3>Personal Portfolio Website</h3>
         <p>A modern, animated portfolio website showcasing my skills and projects with responsive design and smooth animations.</p>
       </div>
-      <div class="project-card fade-in delay-1">
+      <div class="project-card fade-up delay-1">
         <div class="project-number">2</div>
         <h3>Intelligent Pregnancy Care Monitoring System (IoT)</h3>
         <p>An IoT-based system that monitors vital signs using sensors and provides real-time health tracking for pregnant women.</p>
       </div>
-      <div class="project-card fade-in delay-2">
+      <div class="project-card fade-up delay-2">
         <div class="project-number">3</div>
         <h3>Ecommerce Website (Front End)</h3>
         <p>A fully responsive e-commerce frontend with modern UI/UX design and interactive elements.</p>
@@ -1053,16 +1019,16 @@
     </div>
   </section>
 
-  <!-- PUBLICATIONS SECTION -->
-  <section id="publications">
-    <h2 class="section-title">Publications</h2>
-    <div class="publications-container">
-      <div class="publication-card fade-in">
+  <!-- Publications Section -->
+  <section id="publications" class="content-section">
+    <h2 class="section-heading">Publications</h2>
+    <div class="publications-wrapper">
+      <div class="publication-item fade-up">
         <h3>ICON'25 — Dr. M.G.R. Research Institute</h3>
         <p>Presented "Patient Care using Mobile Monitoring with Alerting Sound" project at Dr. MGR University's internal conference as an internal conference publication.</p>
         <div class="publication-tag">Conference Publication</div>
       </div>
-      <div class="publication-card fade-in delay-1">
+      <div class="publication-item fade-up delay-1">
         <h3>ICONIC'25 — Panimalar Institute</h3>
         <p>Presented "Patient Care using Mobile Monitoring with Alerting Sound" project at Panimalar Institute's conference as an external conference publication with Scopus indexing.</p>
         <div class="publication-tag">Scopus Indexed</div>
@@ -1070,29 +1036,93 @@
     </div>
   </section>
 
-  <!-- RESUME SECTION -->
+  <!-- Resume Section -->
   <section id="resume">
     <div class="resume-section">
-      <h2 class="section-title">Download Resume</h2>
-      <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-light); max-width: 600px; margin: 0 auto 2rem;">
+      <h2 class="section-heading">Download Resume</h2>
+      <p style="margin-bottom: 32px; font-size: 18px; color: #666666; max-width: 600px; margin: 0 auto 32px;">
         Download my detailed resume to learn more about my experience, qualifications, and projects.
       </p>
-      <a href="sahanaresb.pdf" download class="resume-btn fade-in">
+      <a href="sahanaresb.pdf" download class="download-btn fade-up">
         <i class="fas fa-download"></i>
         <span>Download Resume (PDF)</span>
       </a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer id="contact">
-    <h3 style="color: var(--accent1); margin-bottom: 1rem; font-size: 1.8rem;">Get In Touch</h3>
-    <p style="color: var(--text-light); margin-bottom: 1.5rem; max-width: 600px; margin: 0 auto 1.5rem;">
-      Feel free to reach out for collaborations, opportunities, or just a friendly conversation!
+  <!-- Footer -->
+  <footer id="contact" class="page-footer">
+    <h3 style="color: #667eea; margin-bottom: 16px; font-size: 24px;">Get In Touch</h3>
+    <p style="color: #666666; margin-bottom: 24px; max-width: 600px; margin: 0 auto 24px;">
+      Feel free to reach out for collaborations, opportunities.
     </p>
-    <div class="social-links">
-      <a href="mailto:sahanabaranidaran@gmail.com" class="social-link">
+    <div class="contact-links">
+      <a href="mailto:sahanabaranidaran@gmail.com" class="contact-link">
         <i class="fas fa-envelope"></i>
         <span>Email</span>
       </a>
-      <a href="https://linkedin.com/in/sahana-baranidaran-662a8b249" target="_
+      <a href="https://linkedin.com/in/sahana-baranidaran-662a8b249" target="_blank" class="contact-link">
+        <i class="fab fa-linkedin"></i>
+        <span>LinkedIn</span>
+      </a>
+      <a href="tel:+916374443814" class="contact-link">
+        <i class="fas fa-phone"></i>
+        <span>Phone</span>
+      </a>
+      <a href="sahanaresb.pdf" download class="contact-link">
+        <i class="fas fa-file-pdf"></i>
+        <span>Resume</span>
+      </a>
+    </div>
+    <p style="margin-top: 32px; color: #666666; font-size: 14px;">
+      © 2024 Sahana B. All rights reserved.
+    </p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Scroll animation observer
+    const animationObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('fade-up');
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Observe all elements with fade-up class
+    document.querySelectorAll('.fade-up').forEach(el => {
+      animationObserver.observe(el);
+    });
+
+    // Page load animation
+    window.addEventListener('load', () => {
+      document.body.style.opacity = '0';
+      document.body.style.transition = 'opacity 0.5s ease';
+      
+      setTimeout(() => {
+        document.body.style.opacity = '1';
+      }, 100);
+    });
+  </script>
+</body>
+</html>
